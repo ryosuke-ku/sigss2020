@@ -18,7 +18,7 @@
  T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
 
 \jtitle{ソースコードの類似性に基づいたテストコード自動推薦ツール{\sf SuiteRec}}
-\jsubtitle{技術研究報告原稿のための解説とテンプレート}
+%\jsubtitle{技術研究報告原稿のための解説とテンプレート}
 \etitle{{\sf SuiteRec}: Automatic Test Suite Recommendation System based on Code Clone Detection}
 %\esubtitle{Guide to the Technical Report and Template}
 \authorlist{%
@@ -41,45 +41,30 @@ Ikoma, Nara, 630–0192,Japan
 
 \begin{document}
 \begin{jabstract}
-テスト工程において，テスト作成コストを削減するために様々なテストコード自 動生成ツールが提案されてきた．しかし，既存のツールによって生成されるテストコードはテスト対象コードの作成経緯や意図に基づいていないという性質から開発者の保守作業を困難にする課題がある．この課題の解決方法として，本研究ではOSSプロジェクト上に存在する既存の品質が高いテストコードを推薦するツール {\sf SuiteRec}を提案する．また，被験者実験を行い{\sf SuiteRec}の有用性を確認した．
+テスト工程において，テスト作成コストを削減するために様々なテストコード自動生成ツールが提案されてきた．しかし，既存のツールによって生成されるテストコードはテスト対象コードの作成経緯や意図に基づいていないという性質から開発者の保守作業を困難にする課題がある．この課題の解決方法として，本研究ではOSSプロジェクト上に存在する既存の品質が高いテストコードを推薦するツール {\sf SuiteRec}を提案する．また，被験者実験を行い{\sf SuiteRec}の有用性を確認した．
 \end{jabstract}
 \begin{jkeyword}
-アスキー版p\LaTeXe{}，タイピングの注意事項
+類似コード検出，推薦システム，ソフトウェアテスト，テストスメル，単体テスト
 \end{jkeyword}
 \begin{eabstract}
-IEICE (the Institute of Electronics, Information 
-and Communication Engineers) provides 
-a p\LaTeXe\ class file, named \IEICEJcls\ (ver.\,\IEICEJver), 
-for the Technical Report of IEICE. 
-This document describes how to use the class file, 
-and also makes some remarks about typesetting a document by using p\LaTeXe. 
-The design is based on ASCII Japanese p\LaTeXe. 
+Automatically generated tests tend to be less read-able and maintainable since they often do not consider thelatent objective of the target code. Reusing existing tests might help address this problem. To this end, we present {\sf SuiteRec}, asystem that recommends reusable test suites based on code clonedetection. Given a java method, {\sf SuiteRec} searches for its code clones from a code base collected from open-source projects, and then recommends test suites of the clones. It also providesthe ranking of the recommended test suites computed based on the similarity between the input code and the cloned code.We evaluate {\sf SuiteRec} with a human study of ten students. The results indicate that {\sf SuiteRec} successfully recommends reusable test suites.
 \end{eabstract}
 \begin{ekeyword}
-p\LaTeXe\ class file, typesetting
+clone detection, recommendation system, software testing, test smell, unit test
 \end{ekeyword}
 \maketitle
 
-\section{まえがき}
+\section{はじめに}
 
-技術研究報告原稿を \IEICEJcls\ を利用して
-執筆する際に必要なことを解説します．
-{\bfseries \ref{sec:cls}} で本クラスファイル固有の使い方を，
-{\bfseries \ref{sec:typesetting}} で美しい組版を行うためのヒント
-ならびに長い数式を処理する際のヒントを，
-{\bfseries 付録}で PDF に書き出す場合の注意を説明します．
-%% ならびに \texttt{jis.tfm} の利用に関わること
+近年，ソフトウェアに求められる要件が高度化・多様化する一方，ユーザからはソフトウェアの品質確保やコスト削減に対する要求も増加している\cite{tanno}．その中でもソフトウェア開発全体のコストに占める割合が大きく，品質確保の要ともいえるソフトウェアテストを支援する技術への関心が高まっている\cite{b20}．しかし，現状ではテスト作成作業の大部分が人手で行われており，多くのテストを作成しようとするとそれに比例してコストも増加してしまう．このような背景から，ソフトウェアの品質を確保しつつコスト削減を達成するために，様々な自動化技術が提案されている\cite{b19,EvoSuite,GRT,b17,T3}．
 
-原稿執筆上の注意事項は，
-「電子情報通信学会技術研究報告原稿の書き方」を参照してください．
-ここでは，本クラスファイルの使用にかかわる点のみを説明します．
+既存研究で提案されている{\sf EvoSuite}\cite{EvoSuite}は，単体テスト自動生成における最先端のツールである．{\sf EvoSuite}は，対象コードを静的解析しプログラムを記号値で表現する．そして，対象コードの制御パスを通るような条件を集め，条件を満たす具体値を生成する．単体テストを自動生成することで，開発者は手作業でのテスト作成時間が自動生成によって節約することができ，またコードカバレッジを大幅に向上することができる．しかし，既存ツールによって自動生成されるテストコードは対象のコードの作成経緯や意図に基づいて生成されていないという性質から後の保守作業を困難にするという課題がある\cite{b14,b15,b13}．これは，自動生成ツールの実用的な利用の価値に疑問を提示させる．テストが失敗するたびに，開発者はテスト対象のコード内で不具合の原因を特定するまたは，テスト自体を更新する必要があるかどうかを判断する必要がある．自動生成されたテストコードは，自動生成によって得られる時間の節約よりも読みづらく，開発者の助けになるというよりかむしろ困難するという結果が報告されている\cite{b1}．
 
-レイアウトに関係するパラメータの変更などは行わないでください．
-また，文字や段落の位置調節を行うための \verb/\vspace/，
-\verb/\smallskip/，\verb/\medskip/，
-\verb/\hspace/ などのコマンドの使用は必要最少限にとどめ，
-\texttt{list} 環境のパラメータを変更することも避けてください．
+我々は，この課題の解決するために既存テストの再利用が有効であると考える．本研究では，OSSに存在する既存の品質の高いテストコード推薦するツール{\sf SuiteRec}を提案する．推薦手法の基本となるアイディアはクローンペア間でのテストコード再利用である．{\sf SuiteRec}は，入力コード片に対して類似コード片を検出し，その類似コード片に対応するテストスイートを開発者に推薦する．さらに，テストコードの良くない実装を表す指標であるテストスメルを開発者に提示し，より品質の高いテストスイートを推薦できるように推薦順位がランキングされる．
 
+評価実験では，被験者によって{\sf SuiteRec}の使用した場合とそうでない場合でテストコードの作成してもらい，テスト作成をどの程度支援できるかを定量的および定性的に評価した．その結果，{\sf SuiteRec}の利用は条件分岐が多く複雑なプログラムのテストコードを作成する際にコードカバレッジの向上に効果的であること，作成したテストコードに含まれるテストスメルの数が少なく品質が高いことが分かった．また，{\sf SuiteRec}は開発者が参考にしたいテストコードを上位に推薦できることを確認した．実験後のアンケートによる定性的な評価では，{\sf SuiteRec}を使用した場合，被験者はテストコードの作成が容易になると認識し，また自分の作成したコードに自信が持てることが分かった．
+
+以降，2章では，本研究に関わるコードクローン及びソフトウェアテストについての背景を説明する．3章では，本研究で提案するテストコード自動推薦ツール{\sf SuiteRec}ついて説明する．4章では，被験者による{\sf SuiteRec}の評価実験について説明する．5章では，{\sf SuiteRec}の有効性と妥当性への脅威について議論する．最後に，6章でまとめと今後の課題について説明する．
 \section{クラスファイルの説明}
 \label{sec:cls}
 
