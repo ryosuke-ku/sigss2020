@@ -6,6 +6,7 @@
 \usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{latexsym}
+\usepackage{comment}
 %\usepackage[fleqn]{amsmath}
 %\usepackage{amssymb}
 
@@ -55,7 +56,7 @@ clone detection, recommendation system, software testing, test smell, unit test
 \maketitle
 
 \section{はじめに}
-
+\begin{comment}
 近年，ソフトウェアに求められる要件が高度化・多様化する一方，ユーザからはソフトウェアの品質確保やコスト削減に対する要求も増加している\cite{tanno}．その中でもソフトウェア開発全体のコストに占める割合が大きく，品質確保の要ともいえるソフトウェアテストを支援する技術への関心が高まっている\cite{b20}．しかし，現状ではテスト作成作業の大部分が人手で行われており，多くのテストを作成しようとするとそれに比例してコストも増加してしまう．このような背景から，ソフトウェアの品質を確保しつつコスト削減を達成するために，様々な自動化技術が提案されている\cite{b19,EvoSuite,GRT,b17,T3}．
 
 既存研究で提案されている{\sf EvoSuite}\cite{EvoSuite}は，単体テスト自動生成における最先端のツールである．{\sf EvoSuite}は，対象コードを静的解析しプログラムを記号値で表現する．そして，対象コードの制御パスを通るような条件を集め，条件を満たす具体値を生成する．単体テストを自動生成することで，開発者は手作業でのテスト作成時間が自動生成によって節約することができ，またコードカバレッジを大幅に向上することができる．しかし，既存ツールによって自動生成されるテストコードは対象のコードの作成経緯や意図に基づいて生成されていないという性質から後の保守作業を困難にするという課題がある\cite{b14,b15,b13}．これは，自動生成ツールの実用的な利用の価値に疑問を提示させる．テストが失敗するたびに，開発者はテスト対象のコード内で不具合の原因を特定するまたは，テスト自体を更新する必要があるかどうかを判断する必要がある．自動生成されたテストコードは，自動生成によって得られる時間の節約よりも読みづらく，開発者の助けになるというよりかむしろ困難するという結果が報告されている\cite{b1}．
@@ -65,11 +66,43 @@ clone detection, recommendation system, software testing, test smell, unit test
 評価実験では，被験者によって{\sf SuiteRec}の使用した場合とそうでない場合でテストコードの作成してもらい，テスト作成をどの程度支援できるかを定量的および定性的に評価した．その結果，{\sf SuiteRec}の利用は条件分岐が多く複雑なプログラムのテストコードを作成する際にコードカバレッジの向上に効果的であること，作成したテストコードに含まれるテストスメルの数が少なく品質が高いことが分かった．また，{\sf SuiteRec}は開発者が参考にしたいテストコードを上位に推薦できることを確認した．実験後のアンケートによる定性的な評価では，{\sf SuiteRec}を使用した場合，被験者はテストコードの作成が容易になると認識し，また自分の作成したコードに自信が持てることが分かった．
 
 以降，2章では，本研究に関わるコードクローン及びソフトウェアテストについての背景を説明する．3章では，本研究で提案するテストコード自動推薦ツール{\sf SuiteRec}ついて説明する．4章では，被験者による{\sf SuiteRec}の評価実験について説明する．5章では，{\sf SuiteRec}の有効性と妥当性への脅威について議論する．最後に，6章でまとめと今後の課題について説明する．
-\section{クラスファイルの説明}
-\label{sec:cls}
+\end{comment}
 
-\subsection{テンプレートと記述方法}
-\label{sec:technicalreport}
+\section{背景}
+\label{background}
+
+\subsection{テストスメル}
+\label{testsmell}
+
+\subsection{テストコード自動生成技術}
+\label{testgeneration}
+
+\section{{\sf SuiteRec}: テストコード自動推薦ツール}
+\label{SuiteRec}
+
+\subsection{Step1: 類似コード片の検出}
+\label{step1}
+
+\subsection{Step2: テストコードの検索}
+\label{step2}
+
+\subsection{Step3: テストスメルの検出}
+\label{step3}
+
+\subsection{Step4: 推薦されるテストスイートの順位付け}
+\label{step4}
+
+\section{評価実験}
+\label{evaluation}
+
+\section{議論}
+\label{discussion}
+
+\section{まとめと今後の課題}
+\label{conclusion}
+
+
+\begin{comment}
 
 以下のテンプレートに従って記述してください．
 原稿執筆に際しては，本クラスファイルとともに配布される
@@ -988,6 +1021,8 @@ A = \left(
 
 %% \section{採録時のデータ提出}
 %% 削除
+
+\end{comment}
 
 \begin{thebibliography}{99}
 %\bibitem{ohno}
