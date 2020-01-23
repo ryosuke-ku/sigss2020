@@ -79,14 +79,32 @@ clone detection, recommendation system, software testing, test smell, unit test
 
 以下に本研究で扱う6種類のテストスメルを説明する．
 
+\noindent
+\textbf {Assetion Roulette}: 1つのテストメソッド内に複数のassert文が存在するテストコード.各assert文は異なる条件をテストするが，テストが失敗した場合開発者へ各assert文のエラーメッセージは提供されないので，失敗を特定することが困難になる．
 
+\noindent
+\textbf {Conditional Test Logic}: テストメソッド内に複数の制御文が含まれているテストスイート．テスト成功・失敗は制御フロー内にあるassert文に基づくの予測するのが難しい．
+
+\noindent
+\textbf {Default Test}: JUnitなどのテスティングフレームワークを使用したテストコードの内，テストクラスやテストメソッドの名前がデフォルトの状態であるテストコード．テストコードの可読性の向上ために適切な名前に変更する必要がある．
+
+\noindent
+\textbf {Eager Test}: テスト対象クラス内の複数のメソッドを呼び出しているテストコード．1つのテストメソッド内で複数のメソッド呼び出しを行うと，正確に何をテストしているかについて混乱が生じる．
+
+\noindent
+\textbf {Exception Handling}: テストメソッド内で例外処理が含まれているまたは例外を投げるテストコード．例外処理はプロダクションコードに記述し，テストコード内で例外処理が正しく行われるかどうかを確かめるようにリファクタリングする必要がある．
+
+\noindent
+\textbf {Mystery Guest}: テストメソッド内で，外部リソースを利用するテストコード．テストメソッド内だけで完結せず外部のファイルなど，外部リソースを利用すると外部との依存関係が生じ，外部リソースが壊れた場合テストも失敗してしまう．
+
+\begin{comment}
 \begin{table*}[t]
 \caption{Six Relevant Test Smells for Reusing Test Suites.}
 \label{smells}
 \begin{tabular}{|l|p{14.5cm}|}
 \hline
 \textbf{テストスメル}                   & \textbf{説明}                                                                                                       \\ \hline
-\textbf{Assetion Roulette}        & 1つのテストメソッド内に複数のassert文が存在するテストコード.各assert文は異なる条件をテストするが，テストが失敗した場合開発者へ各assert文のエラーメッセージは提供されないので，失敗を特定することが困難になる． \\ \hline
+\textbf{Assetion Roulette}        & テストメソッド内に複数のassert文が存在するテストコード.各assert文は異なる条件をテストするが，テストが失敗した場合開発者へ各assert文のエラーメッセージは提供されないので，失敗を特定することが困難になる． \\ \hline
 \textbf{Conditional Test Logic} & テストメソッド内に複数の制御文が含まれているテストスイート．テスト成功・失敗は制御フロー内にあるassert文に基づくの予測するのが難しい．\\ \hline
 \textbf{Default Test}            & JUnitなどのテスティングフレームワークを使用したテストコードの内，テストクラスやテストメソッドの名前がデフォルトの状態であるテストコード．テストコードの可読性の向上ために適切な名前に変更する必要がある． \\ \hline
 \textbf{Eager Test }             & テスト対象クラス内の複数のメソッドを呼び出しているテストコード．1つのテストメソッド内で複数のメソッド呼び出しを行うと，正確に何をテストしているかについて混乱が生じる．\\ \hline
@@ -94,6 +112,8 @@ clone detection, recommendation system, software testing, test smell, unit test
 \textbf{Mystery Guest}          & テストメソッド内で，外部リソースを利用するテストコード．テストメソッド内だけで完結せず外部のファイルなど，外部リソースを利用すると外部との依存関係が生じ，外部リソースが壊れた場合テストも失敗してしまう． \\ \hline
 \end{tabular}
 \end{table*}
+
+\end{comment}
 
 \subsection{テストコード自動生成技術}
 \label{testgeneration}

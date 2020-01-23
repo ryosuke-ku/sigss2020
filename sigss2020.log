@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.9.17)  22 JAN 2020 16:54
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.9.17)  23 JAN 2020 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,19 +426,11 @@ LaTeX Warning: Citation `t1' on page 2 undefined on input line 78.
 
 LaTeX Warning: Citation `b6' on page 2 undefined on input line 78.
 
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 88.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 88.
-
-Overfull \hbox (23.0921pt too wide) in paragraph at lines 86--96
-[][][][] 
- []
-
+Excluding 'comment' comment.
 File: image/SuiteRec-outline.pdf Graphic file (type pdf)
 <image/SuiteRec-outline.pdf>
-Excluding 'comment' comment. [2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 1212
+ [2] Excluding 'comment' comment.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 1232
 .
 
 (c:/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
@@ -446,19 +438,19 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (I search kanjifont definition file: . . ) (I search font definition file: . .
 . . . . . . )
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 1216
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 1236
 .
  (c:/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3]
 (./sigss2020.aux) ) 
 Here is how much of TeX's memory you used:
- 2154 strings out of 493230
- 28258 string characters out of 6147555
- 100823 words of memory out of 5000000
- 6082 multiletter control sequences out of 15000+600000
- 92905 words of font info for 113 fonts, out of 8000000 for 9000
+ 2146 strings out of 493230
+ 28173 string characters out of 6147555
+ 99815 words of memory out of 5000000
+ 6076 multiletter control sequences out of 15000+600000
+ 89629 words of font info for 110 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,9n,25p,990b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,7n,25p,990b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sigss2020.dvi (3 pages, 25412 bytes).
+Output written on sigss2020.dvi (3 pages, 24676 bytes).
