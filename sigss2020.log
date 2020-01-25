@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.9.17)  25 JAN 2020 13:34
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.9.17)  25 JAN 2020 16:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,7 +411,11 @@ LaTeX Info: Redefining \] on input line 2845.
 (c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (./sigss2020.aux)
+) (./sigss2020.aux
+
+LaTeX Warning: Label `sec:process' multiply defined.
+
+)
 \openout1 = `sigss2020.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -432,8 +436,7 @@ LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
-
-(c:/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 49.
@@ -504,12 +507,6 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 65.
 
 
-LaTeX Warning: Citation `tanno' on page 1 undefined on input line 65.
-
-
-LaTeX Warning: Citation `b20' on page 1 undefined on input line 65.
-
-
 LaTeX Warning: Citation `b19' on page 1 undefined on input line 65.
 
 
@@ -544,133 +541,104 @@ LaTeX Warning: Citation `b1' on page 1 undefined on input line 67.
 
 ]
 
-LaTeX Warning: Citation `h1' on page 2 undefined on input line 84.
+LaTeX Warning: Citation `h1' on page 2 undefined on input line 87.
 
 
-LaTeX Warning: Citation `t1' on page 2 undefined on input line 84.
+LaTeX Warning: Citation `t1' on page 2 undefined on input line 87.
 
 
-LaTeX Warning: Citation `b6' on page 2 undefined on input line 84.
+LaTeX Warning: Citation `b6' on page 2 undefined on input line 87.
 
 Excluding 'comment' comment.
 
-LaTeX Warning: Citation `EvoSuite' on page 2 undefined on input line 127.
+LaTeX Warning: Citation `EvoSuite' on page 2 undefined on input line 130.
 
 
-LaTeX Warning: Citation `b14' on page 2 undefined on input line 127.
+LaTeX Warning: Citation `b14' on page 2 undefined on input line 130.
 
 
-LaTeX Warning: Citation `b15' on page 2 undefined on input line 127.
+LaTeX Warning: Citation `b15' on page 2 undefined on input line 130.
 
 
-LaTeX Warning: Citation `b13' on page 2 undefined on input line 127.
+LaTeX Warning: Citation `b13' on page 2 undefined on input line 130.
 
-[2]
 File: image/SuiteRec-outline.pdf Graphic file (type pdf)
 <image/SuiteRec-outline.pdf>
+[2]
+
+LaTeX Warning: Citation `b2' on page 3 undefined on input line 154.
 
 
-LaTeX Warning: Citation `b2' on page 3 undefined on input line 152.
-
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 157.
-
-(c:/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-
-LaTeX Warning: Citation `FaCoY' on page 3 undefined on input line 164.
+LaTeX Warning: Citation `FaCoY' on page 3 undefined on input line 156.
 
 
-LaTeX Warning: Citation `b22' on page 3 undefined on input line 188.
+LaTeX Warning: Citation `b22' on page 3 undefined on input line 177.
 
-[3]
 File: image/mapping.pdf Graphic file (type pdf)
 <image/mapping.pdf>
 
+LaTeX Warning: Citation `Peruma' on page 3 undefined on input line 188.
 
-LaTeX Warning: Citation `Peruma' on page 4 undefined on input line 199.
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 191
+.
+(c:/texlive/2019/texmf-dist/tex/latex/lm/ts1lmss.fd
+File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [3]
+
+LaTeX Warning: Citation `fose2019' on page 4 undefined on input line 202.
 
 
-LaTeX Warning: Reference `sec:backtestsmell' on page 4 undefined on input line 
-199.
-
-
-LaTeX Warning: Citation `fose2019' on page 4 undefined on input line 215.
-
-LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <9> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 217.
-LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <9> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 217.
-
-Overfull \hbox (24.31026pt too wide) detected at line 222
-\OML/lmm/m/it/9 Unique Percentage of Items \OT1/lmr/m/n/9 (\OML/lmm/m/it/9 UPI\
-OT1/lmr/m/n/9 ) = []
- []
+LaTeX Warning: Reference `sec:E1data' on page 4 undefined on input line 233.
 
 [4]
-Overfull \hbox (73.55786pt too wide) in paragraph at lines 246--248
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
-
- []
-
-
-Overfull \hbox (4.27832pt too wide) in paragraph at lines 248--250
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--250
-
- []
-
-
-Overfull \hbox (90.87775pt too wide) in paragraph at lines 251--252
-[]
- []
-
-
-Overfull \hbox (108.1976pt too wide) in paragraph at lines 253--254
-[]
- []
-
-[5]
-File: image/C0.pdf Graphic file (type pdf)
-<image/C0.pdf>
-File: image/C1.pdf Graphic file (type pdf)
-<image/C1.pdf>
- [6]
+File: image/M.pdf Graphic file (type pdf)
+<image/M.pdf>
+File: image/B.pdf Graphic file (type pdf)
+<image/B.pdf>
+LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <9> not available
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 282.
+LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <9> not available
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 282.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 282.
 File: image/time.pdf Graphic file (type pdf)
 <image/time.pdf>
 
 
-LaTeX Warning: Citation `Peruma' on page 7 undefined on input line 353.
+LaTeX Warning: Citation `Peruma' on page 5 undefined on input line 301.
 
+[5]
 File: image/smells.pdf Graphic file (type pdf)
 <image/smells.pdf>
-[7]
 File: image/suiterec-expt.pdf Graphic file (type pdf)
 <image/suiterec-expt.pdf>
 
-Overfull \hbox (184.31294pt too wide) in paragraph at lines 382--383
+Overfull \hbox (184.31294pt too wide) in paragraph at lines 330--331
  [] 
  []
 
-Excluding 'comment' comment. Excluding 'comment' comment. [8] (./sigss2020.aux)
+[6] Excluding 'comment' comment. Excluding 'comment' comment. [7
+
+]
+(./sigss2020.aux)
 
 LaTeX Warning: There were undefined references.
 
- ) 
-Here is how much of TeX's memory you used:
- 3482 strings out of 493230
- 43530 string characters out of 6147555
- 125100 words of memory out of 5000000
- 7371 multiletter control sequences out of 15000+600000
- 93473 words of font info for 110 fonts, out of 8000000 for 9000
- 929 hyphenation exceptions out of 8191
- 29i,9n,35p,1456b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sigss2020.dvi (8 pages, 64308 bytes).
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 135 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 3459 strings out of 493230
+ 43168 string characters out of 6147555
+ 127056 words of memory out of 5000000
+ 7347 multiletter control sequences out of 15000+600000
+ 97357 words of font info for 112 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 29i,9n,35p,1456b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on sigss2020.dvi (7 pages, 53284 bytes).
