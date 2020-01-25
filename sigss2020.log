@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.9.17)  25 JAN 2020 16:11
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.9.17)  25 JAN 2020 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,8 +587,10 @@ File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 LaTeX Warning: Citation `fose2019' on page 4 undefined on input line 202.
 
+File: image/task.pdf Graphic file (type pdf)
+<image/task.pdf>
 
-LaTeX Warning: Reference `sec:E1data' on page 4 undefined on input line 233.
+LaTeX Warning: Reference `sec:E1data' on page 4 undefined on input line 240.
 
 [4]
 File: image/M.pdf Graphic file (type pdf)
@@ -596,31 +598,31 @@ File: image/M.pdf Graphic file (type pdf)
 File: image/B.pdf Graphic file (type pdf)
 <image/B.pdf>
 LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <9> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 282.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 289.
 LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <9> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 282.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 289.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 282.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 289.
+ [5]
 File: image/time.pdf Graphic file (type pdf)
 <image/time.pdf>
 
 
-LaTeX Warning: Citation `Peruma' on page 5 undefined on input line 301.
+LaTeX Warning: Citation `Peruma' on page 6 undefined on input line 308.
 
-[5]
 File: image/smells.pdf Graphic file (type pdf)
 <image/smells.pdf>
+[6]
 File: image/suiterec-expt.pdf Graphic file (type pdf)
 <image/suiterec-expt.pdf>
 
-Overfull \hbox (184.31294pt too wide) in paragraph at lines 330--331
+Overfull \hbox (184.31294pt too wide) in paragraph at lines 337--338
  [] 
  []
 
-[6] Excluding 'comment' comment. Excluding 'comment' comment. [7
+Excluding 'comment' comment. Excluding 'comment' comment. [7
 
-]
-(./sigss2020.aux)
+] (./sigss2020.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -633,12 +635,12 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 135 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3459 strings out of 493230
- 43168 string characters out of 6147555
- 127056 words of memory out of 5000000
- 7347 multiletter control sequences out of 15000+600000
+ 3463 strings out of 493230
+ 43223 string characters out of 6147555
+ 126064 words of memory out of 5000000
+ 7350 multiletter control sequences out of 15000+600000
  97357 words of font info for 112 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  29i,9n,35p,1456b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sigss2020.dvi (7 pages, 53284 bytes).
+Output written on sigss2020.dvi (7 pages, 53496 bytes).
